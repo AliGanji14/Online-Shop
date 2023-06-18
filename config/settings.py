@@ -27,7 +27,6 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DJANGO_DEBUG")
 
-
 ALLOWED_HOSTS = []
 
 # Application definition
@@ -39,14 +38,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # local apps
+    "accounts.apps.AccountsConfig",
+    "pages.apps.PagesConfig",
+    "products.apps.ProductsConfig",
+
     # third party apps
     'allauth',
     'allauth.account',
     "crispy_forms",
     "crispy_bootstrap5",
-    # localw apps
-    "accounts.apps.AccountsConfig",
-    "pages.apps.PagesConfig",
 ]
 
 SITE_ID = 1
